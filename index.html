@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miel | とろける甘さを</title>
+
+  <style>
+    /* ------------------------------
+       基本設定
+    ------------------------------ */
+    body {
+      margin: 0;
+      font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: #f5f3ee;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* ------------------------------
+       ヘッダー（黒＋金）
+    ------------------------------ */
+    header {
+      background: #000;
+      color: #fff;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #d7b46c;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      opacity: 0.8;
+    }
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ------------------------------
+       HERO セクション（中央に大きめ画像）
+    ------------------------------ */
+    .hero {
+      width: 100%;
+      text-align: center;
+      padding: 40px 20px 60px;
+    }
+
+    .hero img {
+      width: 85%;
+      max-width: 900px;
+      border-radius: 14px;
+      box-shadow: 0 6px 15px #00000020;
+    }
+
+    /* ------------------------------
+       タイトル
+    ------------------------------ */
+    h2.section-title {
+      text-align: center;
+      font-size: 30px;
+      color: #c9a253;
+      margin-top: 80px;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    /* ------------------------------
+       About テキスト
+    ------------------------------ */
+    .about-text {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* ------------------------------
+       メニューのカードデザイン
+    ------------------------------ */
+    .menu-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px #00000015;
+    }
+
+    .menu-card img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .menu-card h3 {
+      font-size: 18px;
+      color: #b88b3b;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #c9a253;
+    }
+
+    /* ------------------------------
+       Access
+    ------------------------------ */
+    .access-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 10px 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .access-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px #00000015;
+      font-size: 15px;
+    }
+
+    .access-card h3 {
+      margin-bottom: 6px;
+      font-size: 18px;
+      color: #b88b3b;
+    }
+
+    /* ------------------------------
+       予約ボタン
+    ------------------------------ */
+    .reserve-btn {
+      display: inline-block;
+      background: #d7b46c;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 17px;
+      box-shadow: 0 4px 10px #00000020;
+      margin: 40px auto 90px;
+    }
+
+    /* ------------------------------
+       フッター
+    ------------------------------ */
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    /* ------------------------------
+       スマホ向け調整
+    ------------------------------ */
+    @media (max-width: 600px) {
+      .hero img {
+        width: 95%;
+      }
+      header {
+        padding: 14px 20px;
+      }
+      nav a {
+        margin-left: 14px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo">Miel</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#access">Access</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://placehold.jp/900x500.png" alt="メイン画像">
+  </section>
+
+  <!-- About -->
+  <h2 id="about" class="section-title">About Miel</h2>
+  <div class="about-text">
+    <p>
+      Miel はフランス語で「蜂蜜」を意味します。  
+      黒と金を基調とした上質な空間に、大理石の床が高級感を演出。  
+      とろけるような甘さのフランス菓子で、癒しのひとときをお届けします。
+    </p>
+  </div>
+
+  <!-- Menu -->
+  <h2 id="menu" class="section-title">Our Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://placehold.jp/300x200.png" alt="">
+      <h3>苺のショートケーキ</h3>
+      <p>ふわふわのスポンジと新鮮な苺の生クリーム</p>
+      <p class="price">¥1,280</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://placehold.jp/300x200.png" alt="">
+      <h3>ハニーチーズケーキ</h3>
+      <p>濃厚なチーズと蜂蜜の上品な甘さ</p>
+      <p class="price">¥1,450</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://placehold.jp/300x200.png" alt="">
+      <h3>ミルフィーユ</h3>
+      <p>サクサクのパイと滑らかなクリーム</p>
+      <p class="price">¥1,350</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://placehold.jp/300x200.png" alt="">
+      <h3>マカロン</h3>
+      <p>色とりどりの可愛らしいフランス菓子</p>
+      <p class="price">¥1,180</p>
+    </div>
+  </div>
+
+  <!-- Access -->
+  <h2 id="access" class="section-title">Access</h2>
+  <div class="access-grid">
+    <div class="access-card">
+      <h3>住所</h3>
+      東京都渋谷区デンテラ地区<br>ククルーマウンテン樹海
+    </div>
+
+    <div class="access-card">
+      <h3>営業時間</h3>
+      11:00 - 20:00<br>定休日：火曜日
+    </div>
+
+    <div class="access-card">
+      <h3>アクセス</h3>
+      やさなら駅より徒歩3時間
+    </div>
+  </div>
+
+  <div style="text-align:center;">
+    <a href="#" class="reserve-btn">📩 ご予約はこちら</a>
+  </div>
+
+  <footer>
+    © 2024 Cafe Miel. All rights reserved.
+  </footer>
+
+</body>
+</html>
