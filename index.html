@@ -1,308 +1,266 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miel | とろける甘さを</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miel | とろけるような甘さを</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  background: #f5f3ee;
+  color: #222;
+  line-height: 1.8;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  <style>
-    /* ==============================
-       基本設定
-    ============================== */
-    body {
-      margin: 0;
-      font-family: "Playfair Display", "Noto Sans JP", serif;
-      background: #f6f4ef;
-      color: #2b2b2b;
-      line-height: 1.8;
-    }
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 100;
+}
+.header-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+nav a {
+  margin-left: 30px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #fff;
+}
 
-    a { text-decoration: none; color: inherit; }
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.15)),
+    url("https://ps238026-stack.github.io/site/images/スクリーンショット%202025-12-15%20144852.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 52px;
+  letter-spacing: 6px;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.hero p {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #f0e6c8;
+}
 
-    /* ==============================
-       ヘッダー
-    ============================== */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 70px;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 40px;
-      z-index: 100;
-    }
+/* ===== Section ===== */
+section {
+  padding: 110px 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 34px;
+  letter-spacing: 4px;
+  color: #b79a4b;
+  margin-bottom: 50px;
+}
 
-    .header-logo {
-      height: 36px;
-    }
+/* ===== About ===== */
+.about {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #444;
+}
 
-    nav a {
-      margin-left: 28px;
-      font-size: 14px;
-      letter-spacing: 0.08em;
-      color: #e6d3a3;
-      opacity: 0.85;
-    }
+/* ===== Menu ===== */
+.menu-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 70px;
+}
+.menu-item {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+.menu-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* Canva比率 */
+  object-fit: cover;     /* トリミング */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.menu-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.menu-item p {
+  font-size: 14px;
+  color: #555;
+}
+.price {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #b79a4b;
+}
 
-    nav a:hover { opacity: 1; }
+/* ===== Access ===== */
+.access-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 40px;
+  text-align: left;
+}
+.access-card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.1);
+  font-size: 14px;
+}
+.access-card h3 {
+  margin-bottom: 12px;
+  color: #b79a4b;
+}
 
-    /* ==============================
-       HERO
-    ============================== */
-    .hero {
-      height: 100vh;
-      position: relative;
-    }
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
 
-    .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        rgba(0,0,0,0.25),
-        rgba(0,0,0,0.55)
-      );
-    }
-
-    .hero-text {
-      position: absolute;
-      bottom: 18%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      color: #fff;
-      z-index: 1;
-    }
-
-    .hero-text h1 {
-      font-size: 48px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      margin-bottom: 10px;
-    }
-
-    .hero-text p {
-      font-size: 16px;
-      letter-spacing: 0.1em;
-      opacity: 0.9;
-    }
-
-    /* ==============================
-       セクション共通
-    ============================== */
-    section {
-      padding: 120px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 34px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      color: #bfa46a;
-      margin-bottom: 50px;
-    }
-
-    /* ==============================
-       About
-    ============================== */
-    .about-text {
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: 15px;
-      color: #555;
-    }
-
-    /* ==============================
-       Menu
-    ============================== */
-    .menu-grid {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 60px 40px;
-    }
-
-    .menu-item img {
-      width: 100%;
-      height: 340px;
-      object-fit: cover;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-      margin-bottom: 18px;
-    }
-
-    .menu-item h3 {
-      font-size: 20px;
-      color: #bfa46a;
-      margin-bottom: 6px;
-    }
-
-    .menu-item p {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: 14px;
-      color: #555;
-      margin: 0;
-    }
-
-    .price {
-      margin-top: 10px;
-      font-size: 15px;
-      letter-spacing: 0.05em;
-    }
-
-    /* ==============================
-       Access
-    ============================== */
-    .access {
-      background: #111;
-      color: #eee;
-    }
-
-    .access-grid {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 40px;
-      font-family: "Noto Sans JP", sans-serif;
-    }
-
-    .access h3 {
-      color: #bfa46a;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    /* ==============================
-       Footer
-    ============================== */
-    footer {
-      background: #000;
-      color: #777;
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 12px;
-      font-family: "Noto Sans JP", sans-serif;
-    }
-
-    /* ==============================
-       スマホ
-    ============================== */
-    @media (max-width: 600px) {
-      .hero-text h1 { font-size: 34px; }
-      header { padding: 0 20px; }
-    }
-  </style>
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 14px 20px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="https://ps238026-stack.github.io/site/images/スクリーンショット%202025-12-15%20144852.png" class="header-logo" alt="Miel logo">
-    <nav>
-      <a href="#about">ABOUT</a>
-      <a href="#menu">MENU</a>
-      <a href="#access">ACCESS</a>
-    </nav>
-  </header>
+<header>
+  <img src="https://ps238026-stack.github.io/site/images/スクリーンショット%202025-12-15%20144852.png" alt="Miel ロゴ" class="header-logo">
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#menu">MENU</a>
+    <a href="#access">ACCESS</a>
+  </nav>
+</header>
 
-  <!-- Hero -->
-  <div class="hero">
-    <img src="https://ps238026-stack.github.io/site/images/スクリーンショット%202025-12-15%20144852.png" alt="hero">
-    <div class="hero-text">
-      <h1>MIEL</h1>
-      <p>とろけるような甘さを</p>
+<div class="hero">
+  <div>
+    <h1>Miel</h1>
+    <p>とろけるような甘さを</p>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about">
+    Mielはフランス語で「蜂蜜」を意味します。<br>
+    黒と金を基調とした空間で、<br>
+    とろけるようなフランス菓子をお楽しみください。
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Menu</h2>
+  <div class="menu-list">
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/739a23ecadadd4d56f38e0eb5b9a9971.jpg">
+      <h3>苺のショートケーキ</h3>
+      <p>ふわふわのスポンジと生クリーム</p>
+      <div class="price">¥1,280</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/b45d48089c04e03f74830dca86f4bbe3.jpg">
+      <h3>ハニーチーズケーキ</h3>
+      <p>蜂蜜香る濃厚チーズ</p>
+      <div class="price">¥1,450</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/dba4327b53c5c5aefb3a8f10d8565fb0.jpg">
+      <h3>ミルフィーユ</h3>
+      <p>サクサク食感の重なり</p>
+      <div class="price">¥1,350</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/cfac114d4c9a47e65461f611761725c7.jpg">
+      <h3>マカロン</h3>
+      <p>色とりどりの小さな幸せ</p>
+      <div class="price">¥1,180</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="access">
+  <h2>Access</h2>
+  <div class="access-grid">
+    <div class="access-card">
+      <h3>住所</h3>
+      東京都渋谷区デンテラ地区<br>ククルーマウンテン樹海
+    </div>
+    <div class="access-card">
+      <h3>営業時間</h3>
+      11:00 – 20:00<br>定休日：火曜日
+    </div>
+    <div class="access-card">
+      <h3>アクセス</h3>
+      やさなら駅より徒歩3時間
     </div>
   </div>
+</section>
 
-  <!-- About -->
-  <section id="about">
-    <h2 class="section-title">ABOUT</h2>
-    <div class="about-text">
-      Miel はフランス語で「蜂蜜」を意味します。<br>
-      黒と金を基調とした空間で、
-      とろけるようなフランス菓子と
-      静かなひとときをお楽しみください。
-    </div>
-  </section>
-
-  <!-- Menu -->
-  <section id="menu">
-    <h2 class="section-title">MENU</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="https://ps238026-stack.github.io/site/images/739a23ecadadd4d56f38e0eb5b9a9971.jpg" alt="苺のショートケーキ">
-        <h3>Strawberry Shortcake</h3>
-        <p>苺のショートケーキ</p>
-        <div class="price">¥1,280</div>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://ps238026-stack.github.io/site/images/b45d48089c04e03f74830dca86f4bbe3.jpg" alt="チーズケーキ">
-        <h3>Honey Cheesecake</h3>
-        <p>ハニーチーズケーキ</p>
-        <div class="price">¥1,450</div>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://ps238026-stack.github.io/site/images/dba4327b53c5c5aefb3a8f10d8565fb0.jpg" alt="ミルフィーユ">
-        <h3>Mille-feuille</h3>
-        <p>ミルフィーユ</p>
-        <div class="price">¥1,350</div>
-      </div>
-
-      <div class="menu-item">
-        <img src="https://ps238026-stack.github.io/site/images/cfac114d4c9a47e65461f611761725c7.jpg" alt="マカロン">
-        <h3>Macaron</h3>
-        <p>マカロン</p>
-        <div class="price">¥1,180</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Access -->
-  <section id="access" class="access">
-    <h2 class="section-title">ACCESS</h2>
-    <div class="access-grid">
-      <div>
-        <h3>Address</h3>
-        東京都渋谷区デンテラ地区<br>ククルーマウンテン樹海
-      </div>
-      <div>
-        <h3>Open</h3>
-        11:00 – 20:00<br>Closed Tue.
-      </div>
-      <div>
-        <h3>Station</h3>
-        やさなら駅より徒歩3時間
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2024 Cafe Miel
-  </footer>
+<footer>
+  © 2024 Miel
+</footer>
 
 </body>
 </html>
+
 
 
 
