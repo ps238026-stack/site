@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miel | とろけるような甘さを</title>
+
+<style>
+/* ===== Reset ===== */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  background:#f6f4ef;
+  color:#2b2b2b;
+  line-height:1.9;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* ===== 共通背景 ===== */
+.bg{
+  background:
+    linear-gradient(135deg,#f7f6f3 0%,#e6e4df 40%,#d6d4cf 60%,#f5f3ee 100%);
+}
+
+/* ===== Header ===== */
+header{
+  position:fixed;
+  top:0;left:0;width:100%;
+  padding:18px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,.6);
+  backdrop-filter:blur(6px);
+  z-index:100;
+}
+.header-left{
+  color:#c9b36a;
+  font-size:20px;
+  letter-spacing:2px;
+}
+.header-left span{
+  display:block;
+  font-size:11px;
+  color:#aaa;
+  letter-spacing:1px;
+}
+nav a{
+  margin-left:26px;
+  font-size:13px;
+  letter-spacing:2px;
+  color:#444;
+}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:100vh;
+  padding-top:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hero-box{
+  width:80%;
+  max-width:1100px;
+  padding:90px 40px;
+  background:
+    linear-gradient(135deg,#f3f0e8 0%,#bfbcb6 55%,#f3f0e8 100%);
+  text-align:center;
+}
+.hero-box h1{
+  font-size:42px;
+  letter-spacing:6px;
+  margin-bottom:18px;
+}
+.hero-box p{
+  font-size:14px;
+  letter-spacing:3px;
+  color:#555;
+}
+
+/* ===== Section ===== */
+section{
+  padding:120px 20px;
+  text-align:center;
+}
+section h2{
+  font-size:28px;
+  letter-spacing:4px;
+  color:#c9b36a;
+  margin-bottom:12px;
+}
+.section-line{
+  width:36px;
+  height:1px;
+  background:#c9b36a;
+  margin:0 auto 46px;
+}
+
+/* ===== About ===== */
+.about{
+  max-width:760px;
+  margin:0 auto;
+  font-size:14px;
+  color:#555;
+}
+
+/* ===== Menu ===== */
+.menu-list{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:60px;
+}
+.menu-item{
+  background:#fff;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+}
+.menu-item img{
+  aspect-ratio:4/3;
+  object-fit:cover;
+  margin-bottom:16px;
+}
+.menu-item:nth-child(1) img{object-position:center 30%;}
+.menu-item:nth-child(2) img{object-position:center 55%;}
+.menu-item h3{
+  font-size:16px;
+  margin-bottom:6px;
+}
+.menu-item p{
+  font-size:13px;
+  color:#777;
+}
+.price{
+  margin-top:6px;
+  font-size:14px;
+  color:#c9b36a;
+}
+
+/* ===== Access ===== */
+.access-grid{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+.access-card{
+  background:#fff;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+  text-align:left;
+  font-size:13px;
+}
+.access-card h3{
+  color:#c9b36a;
+  margin-bottom:10px;
+}
+
+/* ===== Footer ===== */
+footer{
+  padding:90px 20px 60px;
+  text-align:center;
+  font-size:12px;
+  color:#888;
+}
+.reserve-btn{
+  margin-top:24px;
+  display:inline-block;
+  padding:12px 40px;
+  border-radius:999px;
+  background:linear-gradient(#f3d46b,#d6b24d);
+  color:#fff;
+  font-size:13px;
+  letter-spacing:2px;
+  transition:opacity .3s;
+}
+.reserve-btn:hover{
+  opacity:.85;
+}
+
+/* ===== Mobile ===== */
+@media(max-width:900px){
+  .menu-list{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  header{padding:14px 20px}
+  .hero-box{padding:60px 20px}
+  .menu-list,.access-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body class="bg">
+
+<header>
+  <div class="header-left">
+    Miel
+    <span>とろけるような甘さを</span>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#access">Access</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Welcome to Miel</h1>
+    <p>とろけるような甘さと、上質なひとときを</p>
+  </div>
+</div>
+
+<section id="about" class="bg">
+  <h2>About Miel</h2>
+  <div class="section-line"></div>
+  <div class="about">
+    Mielは、フランス語で「蜂蜜」を意味します。<br>
+    黒を基調とした洗練された空間に、<br>
+    とろけるような甘さのフランス菓子をお届けします。
+  </div>
+</section>
+
+<section id="menu">
+  <h2>Our Menu</h2>
+  <div class="section-line"></div>
+
+  <div class="menu-list">
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/siyoto.png.png">
+      <h3>苺のショートケーキ</h3>
+      <p>ふわふわのスポンジと生クリーム</p>
+      <div class="price">¥1,280</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/cise.png.png">
+      <h3>ハニーチーズケーキ</h3>
+      <p>濃厚チーズに蜂蜜の優しい甘さ</p>
+      <div class="price">¥1,450</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/dba4327b53c5c5aefb3a8f10d8565fb0.jpg">
+      <h3>ミルフィーユ</h3>
+      <p>サクサクのパイ生地</p>
+      <div class="price">¥1,350</div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://ps238026-stack.github.io/site/images/cfac114d4c9a47e65461f611761725c7.jpg">
+      <h3>マカロン</h3>
+      <p>色とりどりのフランス菓子</p>
+      <div class="price">¥1,180</div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="bg">
+  <h2>Access</h2>
+  <div class="section-line"></div>
+
+  <div class="access-grid">
+    <div class="access-card">
+      <h3>住所</h3>
+      東京都渋谷区デンテラ地区<br>ククルーマウンテン樹海
+    </div>
+    <div class="access-card">
+      <h3>営業時間</h3>
+      11:00 – 20:00<br>定休日：火曜日
+    </div>
+    <div class="access-card">
+      <h3>アクセス</h3>
+      やさなら駅より徒歩3時間
+    </div>
+  </div>
+</section>
+
+<footer class="bg">
+  © 2024 Cafe Miel. All rights reserved.<br>
+
+  <!-- 予約サイトへ -->
+  <a
+    href="https://ps238026-stack.github.io/reservation-chatgpt/"
+    class="reserve-btn"
+    target="_blank"
+    rel="noopener"
+  >
+    ご予約はこちら
+  </a>
+</footer>
+
+</body>
+</html>
